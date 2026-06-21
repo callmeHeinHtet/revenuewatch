@@ -8,3 +8,5 @@ next-env.d.ts
 # scratch / dev artifacts
 dev.log
 ui-*.png
+
+.vercel

@@ -171,6 +171,37 @@ body::before {
 .sk { background: linear-gradient(90deg, var(--lacquer-2) 25%, var(--hair) 37%, var(--lacquer-2) 63%); background-size: 400% 100%; border-radius: 6px; animation: shimmer 1.5s linear infinite; }
 @keyframes shimmer { from { background-position: 100% 0; } to { background-position: 0 0; } }
 
+/* ============ LOGIN ============ */
+.login-wrap { min-height: 100dvh; display: flex; align-items: center; justify-content: center; padding: 24px; }
+.login-card {
+  width: 100%; max-width: 360px; text-align: center;
+  border: 1px solid var(--hair); border-radius: var(--radius);
+  background: linear-gradient(180deg, var(--lacquer-2), var(--lacquer));
+  box-shadow: var(--depth); padding: 36px 30px 30px; position: relative; overflow: hidden;
+}
+.login-card::after { content: ""; position: absolute; top: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, var(--gold-bright), transparent); opacity: 0.5; }
+.login-mark { font-family: var(--font-display); font-weight: 700; font-size: 40px; color: var(--gold); letter-spacing: -0.03em; line-height: 1; }
+.login-title { font-family: var(--font-display); font-weight: 540; font-size: 22px; color: var(--ink); margin-top: 14px; letter-spacing: 0.005em; }
+.login-sub { color: var(--muted); font-size: 12.5px; margin-top: 6px; letter-spacing: 0.02em; }
+.login-input {
+  width: 100%; margin-top: 22px; padding: 13px 15px; font-size: 16px; /* 16px = no iOS zoom */
+  font-family: var(--font-mono); letter-spacing: 0.1em; text-align: center;
+  color: var(--ink); background: var(--obsidian); border: 1px solid var(--hair); border-radius: 10px;
+  outline: none; transition: border-color 0.15s var(--ease), box-shadow 0.15s var(--ease);
+}
+.login-input::placeholder { color: var(--muted); letter-spacing: 0.2em; }
+.login-input:focus { border-color: var(--gold); box-shadow: 0 0 0 3px oklch(0.78 0.1 85 / 0.18); }
+.login-input.bad { border-color: oklch(0.6 0.16 28); }
+.login-err { color: oklch(0.78 0.13 30); font-size: 12.5px; margin-top: 10px; }
+.login-btn {
+  width: 100%; margin-top: 18px; padding: 13px; font-size: 14px; font-weight: 600; font-family: var(--font);
+  color: var(--obsidian); background: var(--gold); border: none; border-radius: 10px; cursor: pointer;
+  transition: background 0.15s var(--ease), transform 0.1s var(--ease);
+}
+.login-btn:hover:not(:disabled) { background: var(--gold-bright); }
+.login-btn:active:not(:disabled) { transform: scale(0.98); }
+.login-btn:disabled { opacity: 0.5; cursor: default; }
+
 /* ============ RESPONSIVE ============ */
 
 /* keep two columns through tablet landscape (iPad/Xiaomi Pad 7 landscape),
