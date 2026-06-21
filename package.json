@@ -9,6 +9,7 @@
     "check": "node scripts/check.mjs"
   },
   "dependencies": {
+    "@fontsource-variable/fraunces": "^5.2.9",
     "@neondatabase/serverless": "^0.10.4",
     "geist": "^1.7.2",
     "next": "^15.1.6",
